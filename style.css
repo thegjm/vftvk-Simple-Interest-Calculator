@@ -1,4 +1,13 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;font-family:arial;color:white;}
+h1{color:grey;font-family:verdana;}
 
+/*align:center is no longer supported. Replaced with margin:auto;
+Width:300px is too narrow to match the project details image*/
+.maindiv{background-color: white;color:black;width:500px;padding:20px;border-radius:25px;margin:auto;}
 
+/*div that aligns the span and input boxes
+Assigned Width:300px; here to closer match the project details image*/
+#formstuff{width:300px;margin:auto;}
+
+/*assigns the background color to highlight class*/
+.highlight{background-color:yellow;}
