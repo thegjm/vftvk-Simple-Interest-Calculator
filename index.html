@@ -9,34 +9,53 @@
 <body>
     <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
-        <!--Added div for alignment purposes-->
+        <!--Added div and table for alignment purposes-->
         <div id="formstuff">
+            <table>
             <!--Added some labels for the ..well, labels-->
-            <label for="principal">Amount </label><input type="number" id="principal"> <br /><br />
-
-            <!--updateRate() on change of rate-->
-            <label for="rate">Rate </label><input onchange="updateRate()" type="range" id="rate" min="1" max="20"
-                value="10.25" step="0.25"><span id="rate_val">10.25%</span> <br /><br />
-            <label for="years">No. of Years </label><select id="years">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select> <br /><br />
+                <tr>
+                    <td>
+                        <label for="principal">Amount </label>
+                    </td>
+                    <td class="pad">
+                        <input type="number" id="principal">
+                    </td>
+                </tr>
+                <!--updateRate() on change of rate-->
+                <tr>
+                    <td>
+                        <label for="rate">Rate </label>
+                    </td>
+                    <td class="pad">
+                        <input onchange="updateRate()" type="range" id="rate" min="1" max="20" value="10.25" step="0.25"><span id="rate_val">10.25%</span>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    <label for="years">No. of Years </label>
+                </td>
+                <td class="pad">
+                    <select id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    </td>
+                </tr>
+            </table>
 
             <!--button goes to checkValue() on click-->
             <button onclick="checkValue()">Compute Interest</button> <br /><br />
 
             <!--span for the result is below the button-->
-            <span id="result">
-
-            </span><br /><br />
+            <span id="result"></span>
         </div>
         <!--footer is outside of the alignment div so that it sits all the way left to match the project details image-->
         <footer>
