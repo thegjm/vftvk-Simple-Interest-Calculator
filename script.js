@@ -29,12 +29,8 @@ function checkValue() {
     //placing focus on principal input if any one condition is true
     if((amount == "") || (amount == undefined) || (amount == NaN) || (amount <= 0)){
         alert("Enter a positive number");
-        //resets values on the page if the principal is an invalid value
-        document.getElementById("result").innerText = "";
-        document.getElementById("principal").value = "";
-        document.getElementById("rate").value = 10.25;
-        updateRate();
-        document.getElementById("years").selectedIndex = 0;
+        //resets values on the page when the principal is an invalid value
+        resetValues();
         //sets focus on the principal input box
         principal.focus();
         return false;
@@ -42,4 +38,13 @@ function checkValue() {
     //runs compute() if other conditions are false
         return compute();
     }
+}
+
+//funtion to reset values on the page
+function resetValues(){
+    document.getElementById("result").innerText = "";
+    document.getElementById("principal").value = "";
+    document.getElementById("rate").value = 10.25;
+    updateRate();
+    document.getElementById("years").selectedIndex = 0;
 }
